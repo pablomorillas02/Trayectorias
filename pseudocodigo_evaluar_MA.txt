@@ -1,0 +1,45 @@
+funcion evaluar(vecinos):
+	cent := false
+	mejor_momento := vecinos[0]
+
+	mienstras i < k:
+		si abs(optimo - evaluar(vecinos[i])) >= abs(optimo - evaluar(mejor_momento)) || es_tabu(vecinos[i]):
+			i := i + 1
+		si no:
+			mejor_momento := vecinos[i]
+		fin si
+	fin mientras
+
+	si !cent:
+		contador_oscilacion := contador_oscilacion + 1
+		
+		si contador_VNS == 1:
+			generar_vecinos_aleatorio(solucion_actual)
+			contador_VNS := contador_VNS + 1
+		si contador_VNS == 2:
+			generar_vecinos_signo(solucion_actual)
+			contador_VNS = 1
+		fin si
+				
+	si no:
+		contador_oscilacion := 0
+	fin si
+
+	si contador_oscilacion >= no_mejora:
+		si aleatorio entre 0 y 1 <= probabilidad_estrategia:
+			diversificacion(vecinos)
+		si no:
+			intensificacion(vecinos)
+		fin si
+
+		contador_oscilacion := 0
+	fin si
+
+	si abs(optimo - evaluar(solucion_actual)) >= abs(optimo - evaluar(mejor_momento)):
+		actualizar_lista_cambios(mejor_momento)
+		actualizar_tabla()
+
+		solucion_actual := mejor_momento
+	fin si
+final funcion
+

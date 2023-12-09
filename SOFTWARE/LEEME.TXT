@@ -1,0 +1,24 @@
+==========================
+PRÁCTICA 1 METAHEURISTICAS
+==========================
+
+En la carpeta BIN se incluye:
+
+	- setup.jar: Ejecutable del programa. Para ejecutarlo, abra una consola, sitúese en esta carpeta
+	y ejecute el comando java -jar setup.jar "config.txt"
+	
+	- Archivos de texto de las funciones: Archivos de donde el programa recoge los datos de cada función
+	a evaluar (mínimo, máximo y óptimo global), cada uno con el nombre correspondiente.
+
+	- config.txt: Archivo de configuración donde se podrá definir la función que evaluará el programa,
+	el algoritmo a ejecutar y todos los parámetros necesarios.
+
+		Nota 1: Para las funciones, poner el nombre del fichero (Ej: Ackley.txt)
+		Nota 2: Los algoritmos que admite este programa son BL3, BLK y MA 
+
+	- Carpeta log: Carpeta donde saldrán los resultados de la ejecución del programa, en varios ficheros 
+	de texto con el nombre de la función evaluada, el nombre del algoritmo usado y cada semilla usada
+
+
+
+

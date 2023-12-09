@@ -1,0 +1,11 @@
+Archivos=Ackley.txt
+Semillas=75943965 76943595 95943765 95953764 45935769
+Algoritmos=MA
+Dimension=10
+Probabilidad de Cambio=0.3
+Iteraciones=1000
+Modificador=0.1
+Tenencia=5
+Intervalo Tabú=0.01
+Probabilidad Oscilación Estratégica=0.5
+% Iteraciones para estancamiento=5
